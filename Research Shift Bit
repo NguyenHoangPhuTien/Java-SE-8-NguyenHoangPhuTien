@@ -1,0 +1,26 @@
+https://vi.wikipedia.org/wiki/Ph%C3%A9p_to%C3%A1n_thao_t%C3%A1c_bit . 
+
+Chỉ được dịch tối đa 5 bit cuối với kiểu int , còn long là 6 bit cuối .
+*************************************************************************************
+2). Không nên dịch bit quá lớn, vượt quá giới hạn cho phép.
+Giả sử bạn dùng 16-bit với phép tính : $result = 35000 << 1;
+kết quả tính ra thu được 70000 , nghĩ là thế nhưng thực tế là lỗi
+vì giới hạn 16-bit max = 65536.
+
+3). Dịch bit và Lũy Thừa cơ số 2 :  
+so sánh 2 cái này phát :
+$x = 99 >> 1;
+$y = 99 /2;
+Kết quả : $x = $y = 49 ; bằng nhau
+làm phép tính khác ;
+$x = 99 << 1;
+$y = 99 * 2;
+Kết quả : $x = $y = 198; bằng nhau
+
+Tóm lại có được quy luật chuyển bit  
+_Dịch sang trái n bit với n là số nguyên dương thì tương đương với nhân với 2 lũy thừa n
+_Dịch sang phải n bit với n là số nguyên dương thì tương đương với chia với 2 lũy thừa n
+
+reference by link :http://diendan.congdongcviet.com/threads/t3046::mot-so-bitwise-operators.cpp
+************************************************************************************
+

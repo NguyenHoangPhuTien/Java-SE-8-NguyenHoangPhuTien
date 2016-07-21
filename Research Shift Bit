@@ -23,4 +23,24 @@ _Dịch sang phải n bit với n là số nguyên dương thì tương đương
 
 reference by link :http://diendan.congdongcviet.com/threads/t3046::mot-so-bitwise-operators.cpp
 ************************************************************************************
+nt x=-45;
+int y=2;
+x=x>>y;
+System.out.println(x);
 
+Trước tiên bạn phải đổi -45 sang nhị phân = 1101 0011 . Nếu bạn chưa biết cách đổi thì bạn vào Topic biểu diễn số âm bằng phương pháp bù 2 (xem link bên trên).
+
+Dòng lệnh x=x>>y, tức là dịch chuyển x qua phải 2 bit (vì y=2). Sau khi dịch chuyển ta sẽ được kết quả như sau: 1111 0100
+
+Để biết được số nhị phân 1111 0100 có giá trị là bao nhiêu khi chuyển sang hệ thập phân, các bạn làm như sau:
+
+– Tiến hành đảo bit 1111 0100 thành => 0000 1011
+
+– Sau đó cộng thêm 1 vào kết quả 0000 1011, ta được 0000 1100
+
+– Như vậy kết quả sẽ được : 2^3+2^2 = 8+4=12, với dấu đằng trước là Âm, nên kết quả ta được -12
+
+link : https://duythanhcse.wordpress.com/2012/01/01/cac-vi-d%E1%BB%A5-v%E1%BB%81-java-assignment-operator/
+
+*****************************************************************************************************************************
+Tức là khi dòng lệnh System.out.println(x); thực hiện thì ta sẽ được -12
